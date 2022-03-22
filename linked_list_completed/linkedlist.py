@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*
 
 class OutOfBoundsException(Exception):
-    pass ##TODO
-
+    def __init__(self, *args: object) -> None:
+        super().__init__(*args)
+    def index_erro(self):
+        raise IndexError("Index cannot be greater than the list size")
 
 class LinkedListNode(object):
     """
@@ -132,8 +134,8 @@ class LinkedList(object):
         contador = 0
         valor = 0
         if((index <= 0) or (index > self._len)):
-            print("Posição inválida.") ##TODO
-            return False
+            erro = OutOfBoundsException()
+            erro.index_erro()
         else:
             index = index - 1
             for i in range(index + 1):
@@ -176,6 +178,8 @@ if __name__ == "__main__":
     assert(ll.head == 1)
     assert(ll.tail == 1)
     assert(len(ll) == 1)
+    # print(ll.getValueAt(1))
+    # ll.getValueAt(2)
     assert(ll.toList() == [1])
     ll.append(2)
     assert(ll.head == 1)
