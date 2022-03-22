@@ -1,0 +1,11 @@
+Package         Version
+--------------- ---------
+asgiref         3.5.0
+certifi         2021.10.8
+Django          4.0.3
+pip             21.2.4
+psycopg2        2.8.6
+psycopg2-binary 2.9.3
+setuptools      58.0.4
+sqlparse        0.4.2
+wheel           0.37.1

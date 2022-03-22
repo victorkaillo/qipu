@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Preloader -->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+        <img src="{% static 'img/core-img/hamburger.png' %}" alt="">
+    </div>
+
+    <!-- Search Wrapper -->
+    <div class="search-wrapper">
+        <!-- Close Btn -->
+        <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form action="#" method="post">
+                        <input type="search" name="search" placeholder="O que está procurando...">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- partial menu -->
+    {% include 'partials/menu.html' %}
+
+        <!-- Receipe Post Search -->
+        <div class="receipe-post-search mb-80">
+            <div class="container">
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-12 col-lg-5">
+                            <select name="select1" id="select1">
+                                <option value="0">Escolha uma opção</option>
+                                <option value="1">insert</option>
+                                <option value="2">append</option>
+                                <option value="3">removeFirst</option>
+                            </select>
+                            <label for="word">Digite um nó:</label>
+                            <input id="word" type="text" name="number_to_list" />
+                            <input type="submit" class="btn delicious-btn"> 
+                        </div>
+                    </form>
+                        <div class="col-12 col-lg-2 text-right">
+                            <h6> {{ linked_list }} </h6>
+                            <!-- <button type="submit" class="btn delicious-btn">Submeter</button> -->
+                        </div>
+                    </div>
+                    {% if count != None %}
+                        <br><br>
+                        Palavra digitada: {{palavra}}<br>
+                        Número de caracteres: {{count}}
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+
+        <!-- Receipe Slider -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="receipe-slider owl-carousel">
+                        <img src="{% static 'img/bg-img/linked_list.png' %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Receipe Content Area -->
+        <div class="receipe-content-area">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <div class="receipe-headline my-5">
+                            <span>Controller List</span>
+                            <h2>Escolha uma ação e clique em enviar</h2>
+                            <div class="receipe-duration">
+                                <h6>insert: insere elemento no inicio da lista</h6>
+                                <h6>append: insere elemento no final da lista</h6>
+                                <h6>removeFirst: remove elemento do inicio da lista</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <!-- Single Preparation Step -->
+                        <div class="single-preparation-step d-flex">
+                            <p>Uma lista encadeada é uma representação de uma sequência de objetos, todos do mesmo tipo, na memória RAM (= random access memory) do computador. Cada elemento da sequência é armazenado em uma célula da lista: o primeiro elemento na primeira célula, o segundo na segunda, e assim por diante. </p>
+                        </div>
+                    </div>
+
+                    <!-- Ingredientes -->
+                    <div class="col-12 col-lg-4">
+                        <div class="ingredients">
+                            <h4>Vantagem</h4>
+                            <div class="ingredients">
+                                <p>A principal vantagem da utilização de listas encadeadas sobre listas sequenciais é o ganho em desempenho em termos de velocidade nas inclusões e remoções de elementos. Em uma lista contígua é necessário mover todos os elementos da lista para uma nova lista para realizar essas operações. </p>
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ingredientes -->
+
+    <!-- partial footer -->
+    {% include 'partials/footer.html' %}
+
+{% endblock %}
