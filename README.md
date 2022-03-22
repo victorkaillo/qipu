@@ -3,7 +3,7 @@ Projeto Django com lista encadeada e WebSCRAPPING de aisweb
 
 ## Desenvolvedor:
 ### Victor Kaillo
-### Utilize as pastas para ver o código e siga cada README.md para rodar
+### Os projetos estão divididos em diretórios. Em cada projeto você encontra o README.md para e
 
 Download do projeto completo: ```git clone https://github.com/victorkaillo/qipu.git```
 

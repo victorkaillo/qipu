@@ -5,8 +5,10 @@ WebSCRAPPING de aisweb
 ### Victor Kaillo
 - Entre no diretorio do projeto scrapping_aisweb:
     - ```cd scrapping_aisweb```
-- Crie o ambiente usando venv:
-    - ```python3 -m venv ./venv```
+- Crie o ambiente usando virtualenv:
+    - ```virtualenv venv```
+        - Ou crie o ambiente usando venv:
+            - ```python3 -m venv ./venv```
 - Ative o ambiente:
     - ```source /path/to/venv/bin/activate```
 - Intale os pacotes recomendados:
